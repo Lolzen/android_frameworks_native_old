@@ -134,6 +134,8 @@ void DisplayUtils::initVDSInstance(HWComposer* hwc, int32_t hwcDisplayId,
         }
     } else {
 #endif
+        (void)currentStateIsSecure;
+        (void)currentStateType;
         VirtualDisplaySurface* vds = new VirtualDisplaySurface(*hwc, hwcDisplayId,
                 currentStateSurface, bqProducer, bqConsumer, currentStateDisplayName);
         dispSurface = vds;
