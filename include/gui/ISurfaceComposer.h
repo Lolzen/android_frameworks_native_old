@@ -67,9 +67,7 @@ public:
     enum {
         eDisplayIdMain     = 0,
         eDisplayIdHdmi     = 1,
-#ifdef QTI_BSP
         eDisplayIdTertiary = 2
-#endif
     };
 
     enum Rotation {
