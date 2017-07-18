@@ -604,9 +604,6 @@ private:
     mat4 mColorMatrix;
     bool mHasColorMatrix;
 
-    mat4 mSecondaryColorMatrix;
-    bool mHasSecondaryColorMatrix;
-
     // Static screen stats
     bool mHasPoweredOff;
     static const size_t NUM_BUCKETS = 8; // < 1-7, 7+
