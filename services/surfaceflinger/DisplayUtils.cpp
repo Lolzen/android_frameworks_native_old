@@ -31,8 +31,6 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-#include <cutils/properties.h>
-
 #include <utils/Errors.h>
 #include <utils/Log.h>
 
