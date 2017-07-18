@@ -94,12 +94,11 @@ Layer* DisplayUtils::getLayerInstance(SurfaceFlinger* flinger,
 HWComposer* DisplayUtils::getHWCInstance(
                         const sp<SurfaceFlinger>& flinger,
                         HWComposer::EventHandler& handler) {
-#ifdef QTI_BSP
     if(sUseExtendedImpls) {
         return new ExHWComposer(flinger, handler);
+    } else {
+        return new HWComposer(flinger,handler);
     }
-#endif
-    return new HWComposer(flinger,handler);
 }
 #else
 HWComposer* DisplayUtils::getHWCInstance(
