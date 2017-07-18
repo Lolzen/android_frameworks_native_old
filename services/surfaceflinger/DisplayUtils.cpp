@@ -97,9 +97,7 @@ HWComposer* DisplayUtils::getHWCInstance(
         return new ExHWComposer(flinger, handler);
     }
 #endif
-    if(sUseExtendedImpls) {
-        return new HWComposer(flinger,handler);
-    }
+    return new HWComposer(flinger,handler);
 }
 #else
 HWComposer* DisplayUtils::getHWCInstance(
@@ -109,9 +107,7 @@ HWComposer* DisplayUtils::getHWCInstance(
         return new ExHWComposer(flinger);
     }
 #endif
-    if(sUseExtendedImpls) {
-        return new HWComposer(flinger);
-    }
+    return new HWComposer(flinger);
 }
 #endif
 
